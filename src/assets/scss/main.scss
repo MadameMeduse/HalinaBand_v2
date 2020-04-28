@@ -137,11 +137,16 @@ p {
 
 //Main
 
-#features {
-	background: url(../img/overview_section.png) !important;
-	background-size: cover;
+section {
+	background-size: 100%;
 	background-position: bottom left;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#features {
+	background: url(../img/overview_section.png) !important;
+
 	h2 {
 		color: $lightBlack;
 	}
@@ -233,10 +238,7 @@ p {
 	}
 }
 #blog {
-	background: url(../img/blog-background.png);
-	background-size: cover;
-	background-position: top left;
-	background-repeat: no-repeat;
+	background: url(../img/about_section.png) !important;
 
 	@include respond-to("lg") {
 		height: 50vw;
@@ -381,9 +383,7 @@ p {
 }
 #contact {
 	background: url(../img/contact-background.png);
-	background-size: cover, cover;
-	background-position: top right, top right;
-	background-repeat: no-repeat, no-repeat;
+	background-position: top right;
 }
 
 .contact-section {

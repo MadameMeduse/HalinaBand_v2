@@ -95,11 +95,15 @@ p {
   transform: translateY(0%);
 }
 
-#features {
-  background: url(../img/overview_section.png) !important;
-  background-size: cover;
+section {
+  background-size: 100%;
   background-position: bottom left;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#features {
+  background: url(../img/overview_section.png) !important;
 }
 #features h2 {
   color: #101010;
@@ -178,10 +182,7 @@ p {
 }
 
 #blog {
-  background: url(../img/blog-background.png);
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
+  background: url(../img/about_section.png) !important;
 }
 @media (min-width: 1200px) {
   #blog {
@@ -364,9 +365,7 @@ p {
 
 #contact {
   background: url(../img/contact-background.png);
-  background-size: cover, cover;
-  background-position: top right, top right;
-  background-repeat: no-repeat, no-repeat;
+  background-position: top right;
 }
 
 .contact-section {
