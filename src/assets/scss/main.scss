@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap&subset=latin-ext");
-
+@import url('https://fonts.googleapis.com/css?family=Catamaran:700|Fira+Mono&display=swap');
 @font-face {
 	font-family: "signature";
 	src: url("../fonts/Signature.ttf");
@@ -31,8 +31,10 @@ $white: #ffffff;
 $lightBlack: #101010;
 $lightGrey: #fafafa;
 $yellow: #fdde59;
-$pink: #ec62c2;
+$pink: #e9aabd;
 $sandy: #fbe0cf;
+$blue: #1d42ae;
+$orange: #da5336;
 
 * {
 	-webkit-font-smoothing: antialiased;
@@ -142,13 +144,20 @@ section {
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	height: 50vw;
 }
 
 #features {
 	background: url(../img/overview_section.png) !important;
 
-	h2 {
-		color: $lightBlack;
+	h1 {
+		color: $blue;
+		font-family: 'Catamaran', sans-serif;
+	}
+	p {
+		color: $orange;
+		text-transform: uppercase;
+		font-family: 'Fira Mono', monospace;
 	}
 	@include respond-to("lg") {
 		// min-height: 50vh;
@@ -157,6 +166,10 @@ section {
 .features {
 	color: $lightBlack;
 	padding-bottom: 10vh;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
 
 	@include respond-to("sm") {
 		.responsive-slick {
@@ -173,70 +186,36 @@ section {
 		margin-left: auto;
 		margin-right: 2vw;
 	}
+
+	&::after {
+		content: "";
+		background-image: url(../img/gif-video2.gif);
+		width: 200px;
+		top: -10%;
+		right: -20%;
+		position: absolute;
+	}
 }
 
-.feature__item {
-	height: 400px;
-	width: 300px;
-	margin: auto;
-	padding: 15px;
-	// box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-	border-radius: 8px;
-	text-align: center;
+.features__title {
+	padding: 2vw;
+}
+
+.features__video {
+	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+	height: max-content;
+	margin-top: 5vw;
+	border: solid $blue;
 
 	@include respond-to("sm") {
 		// margin: 2vw 3vw;
 	}
 
 	@include respond-to("lg") {
-		// margin: 0.5vw;
-		// background: #ffffffde;
-	}
-
-	.feature__item--image {
-		display: flex;
-		height: 60%;
-		@include respond-to("lg") {
-			padding: 1vw;
-		}
-
-		a {
-			margin: auto;
-		}
-		img {
-			// border-radius: 50%;
-			margin: auto;
-			text-align: center;
-			width: 180px;
-			height: 180px;
-			// box-shadow: var(--circuleShadow);
-			// background: $yellow;
-		}
-	}
-	.feature__item--content {
-		margin: auto;
-		height: 40%;
-		text-align: center;
-		@include flexBetween;
-		flex-direction: column;
-		justify-content: space-between;
-
-		a {
-			color: $lightBlack;
-			font-weight: bold;
-			font-size: 13px;
-			margin-top: auto;
-		}
-		p {
-			padding: 0 2vw;
-			width: 70%;
-
-			@include respond-to("lg") {
-				padding: 0;
-			}
-		}
+		width: 20vw;
 	}
 }
+
 #blog {
 	background: url(../img/about_section.png) !important;
 
