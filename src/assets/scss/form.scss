@@ -1,68 +1,43 @@
 @import "main.scss";
 
 form {
-  @include respond-to("lg") {
-    width: 540px;
-    height: 305px;
-  }
-  .form__name {
-    display: block;
-    @include respond-to("md") {
-      @include flexBetween;
-    }
-    input {
-      margin-right: 0;
-    }
-  }
-  label {
-    display: none;
-  }
+	@include respond-to("lg") {
+		width: 540px;
+		height: 305px;
+	}
+	.form__name {
+		display: block;
+		@include respond-to("md") {
+			@include flexBetween;
+		}
+		input {
+			margin-right: 0;
+		}
+	}
+	label {
+		display: none;
+	}
 
-  input,
-  select {
-    padding: 10px;
-    border: 1px solid #333333;
-    border-radius: 6px;
-    width: 100%;
-    height: 45px;
-    background: transparent;
-    font-size: 16px;
-    line-height: 19px;
-    color: rgba(19, 39, 67, 0.5);
-    margin-bottom: 10px;
-    @include respond-to("md") {
-      margin-bottom: 23px;
-      padding: 20px 30px;
-      height: 60px;
+	input,
+	select {
+		padding: 10px;
+		border: 1px solid #333333;
+		border-radius: 6px;
+		width: 100%;
+		height: 45px;
+		background: transparent;
+		font-size: 16px;
+		line-height: 19px;
+		color: rgba(19, 39, 67, 0.5);
+		margin-bottom: 10px;
+		@include respond-to("md") {
+			margin-bottom: 23px;
+			padding: 20px 30px;
+			height: 60px;
 
-      &:first-of-type {
-        margin-right: 23px;
-      }
-    }
-  }
-
-  button {
-    width: 160px;
-    height: 50px;
-    background: transparent;
-    border: 1.5px solid $pink;
-    border-radius: 6px;
-    text-transform: uppercase;
-    color: $pink;
-    font-size: 14px;
-    margin: 2vw auto;
-    background: 0.2s ease;
-    @include flexCenter;
-    transition: all 0.3s ease;
-
-    @include respond-to("md") {
-      margin: 0;
-    }
-    &:hover {
-      background: $pink;
-      border: solid 2px $pink;
-      color: $white;
-      font-weight: 700;
-    }
-  }
+			&:first-of-type {
+				margin-right: 23px;
+			}
+		}
+	}
 }

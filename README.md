@@ -1,6 +1,6 @@
-# Monika Waligóra Portfolio
+# Halina Band Fanpage
 
-<a href="https://madamemeduse.github.io/Portfolio/">Click to see demo</a>
+<a href="https://madamemeduse.github.io/HalinaBand_v2/">Click to see demo</a>
 
 # Aby uruchomić stronę należy kliknąć w link do demo powyżej lub:
 

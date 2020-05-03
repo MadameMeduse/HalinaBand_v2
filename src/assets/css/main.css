@@ -22,6 +22,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 *,
@@ -46,6 +47,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:hover {
   cursor: pointer;
@@ -78,8 +80,43 @@ p {
   line-height: 150%;
 }
 
+button {
+  width: 115px;
+  height: 40px;
+  background: transparent;
+  border: 1.5px solid #1d42ae;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #1d42ae;
+  font-size: 12px;
+  margin: 2vw auto;
+  background: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  button {
+    margin: auto;
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+button:hover {
+  background: #fbe0cf;
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  box-shadow: var(--elementShadow);
+}
+
 .active {
-  border-bottom: ridge 1px black;
+  border-bottom: ridge 1px white;
+  color: #ffffff !important;
 }
 
 .slide-in {
@@ -95,79 +132,148 @@ p {
 
 section {
   background-size: 100%;
-  background-position: bottom left;
+  background-position: top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 50vw;
+  min-height: 40vh;
+  padding-bottom: 5vh;
+}
+@media (min-width: 1200px) {
+  section {
+    min-height: 70vh;
+  }
+}
+
+#description {
+  background: url(../img/overview_section.png);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+}
+@media (min-width: 1200px) {
+  #description {
+    padding-top: 2vw;
+    min-height: 576px;
+  }
+}
+
+.description__content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  margin: auto 0;
+  min-height: 40vh;
+  padding-bottom: 5vw;
+  padding-top: 12vh;
+}
+@media (min-width: 992px) {
+  .description__content {
+    align-items: flex-end;
+  }
+}
+.description__content p {
+  max-width: 90vw;
+  height: 80%;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 21vw;
+  font-family: "Fira Mono";
+  color: #1d42ae;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .description__content p {
+    font-size: 20px;
+    padding: 3vw;
+    margin-top: 15vw;
+  }
+}
+@media (min-width: 992px) {
+  .description__content p {
+    font-size: 25px;
+    max-width: 70vw;
+  }
+}
+.description__content .description__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vw auto;
+}
+@media (min-width: 1200px) {
+  .description__content .description__button {
+    margin: 2vw auto;
+  }
+}
+.description__content .description__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description__content .description__images img {
+  max-width: 50vw;
+}
+@media (min-width: 992px) {
+  .description__content .description__images img {
+    max-width: 40vw;
+    padding: 3vw;
+  }
+}
+.description__content .description__images .description__images--drummer {
+  max-width: 20vw;
 }
 
 #features {
-  background: url(../img/overview_section.png) !important;
-}
-#features h1 {
-  color: #1d42ae;
-  font-family: "Catamaran", sans-serif;
-}
-#features p {
-  color: #da5336;
-  text-transform: uppercase;
-  font-family: "Fira Mono", monospace;
-}
-.features {
-  color: #101010;
-  padding-bottom: 10vh;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .features .responsive-slick {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (min-width: 1200px) {
-  .features {
-    padding-bottom: 124px;
-    width: 40vw;
-    display: block;
-    margin-left: auto;
-    margin-right: 2vw;
-  }
-}
-.features::after {
-  content: "";
-  background-image: url(../img/gif-video2.gif);
-  width: 200px;
-  top: -10%;
-  right: -20%;
-  position: absolute;
+  background: url(../img/team.png);
+  background-size: cover !important;
 }
 
 .features__title {
   padding: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Catamaran";
+  color: #000000;
+  font-size: 20px;
 }
 
 .features__video {
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   height: max-content;
-  margin-top: 5vw;
+  padding: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.features__video figure {
+  padding: 2vw;
+}
+.features__video figure figcaption {
+  background: rgba(255, 255, 255, 0.425);
+  font-family: "Fira Mono";
+  color: #1d42ae;
+  text-transform: uppercase;
+}
+.features__video button {
+  margin: auto 0;
+  display: flex;
+  font-family: "Fira Mono";
+  color: #1d42ae;
+  text-transform: uppercase;
+}
+.features__video iframe {
   border: solid #1d42ae;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 1200px) {
-  .features__video {
-    width: 20vw;
-  }
-}
-
 #blog {
-  background: url(../img/about_section.png) !important;
+  background: url(../img/blog_section.png);
+  background-size: cover !important;
+  background-origin: border-box;
 }
 @media (min-width: 1200px) {
   #blog {
-    height: 50vw;
+    min-height: 576px;
   }
 }
 
@@ -257,8 +363,8 @@ section {
 }
 
 #projects {
-  background: var(--linearBackground);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .projects-section,
