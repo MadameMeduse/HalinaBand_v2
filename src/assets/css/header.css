@@ -112,9 +112,9 @@ button {
 }
 button:hover {
   background: #fbe0cf;
-  border: solid 2px #ffffff;
-  color: #ffffff;
-  box-shadow: var(--elementShadow);
+  border: none;
+  color: #1d42ae;
+  font-weight: 700;
 }
 
 .active {
@@ -183,6 +183,7 @@ section {
   font-family: "Fira Mono";
   color: #1d42ae;
   text-transform: uppercase;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .description__content p {
@@ -257,6 +258,7 @@ section {
   font-family: "Fira Mono";
   color: #1d42ae;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .features__video button {
   margin: auto 0;
@@ -264,6 +266,7 @@ section {
   font-family: "Fira Mono";
   color: #1d42ae;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .features__video iframe {
   border: solid #1d42ae;
@@ -373,23 +376,12 @@ section {
 .projects-section,
 .contact-section {
   padding: 5vw;
-  max-width: 1600px;
   margin: 0 auto;
-}
-@media (min-width: 992px) {
-  .projects-section,
-.contact-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: flex-start;
-  }
 }
 @media (min-width: 1200px) {
   .projects-section,
 .contact-section {
     padding: 65px 156px;
-    max-height: 500px;
   }
 }
 
@@ -398,14 +390,6 @@ section {
 .contact-section__content,
 .contact-section__form {
   padding: 2vw;
-}
-@media (min-width: 992px) {
-  .projects-section__content,
-.projects-section__slider,
-.contact-section__content,
-.contact-section__form {
-    width: 50%;
-  }
 }
 .projects-section__content h1,
 .projects-section__slider h1,

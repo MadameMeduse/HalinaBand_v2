@@ -35,6 +35,7 @@
 	font-family: 'Fira Mono';
 	color: $blue;
 	text-transform: uppercase;
+	font-weight: 700;
 }
 @mixin mainHeding {
 	font-family: 'Catamaran';
@@ -162,9 +163,9 @@ button {
 	}
 	&:hover {
 		background: $sandy;
-		border: solid 2px $white;
-		color: $white;
-		box-shadow: var(--elementShadow);
+		border: none;
+		color: $blue;
+		font-weight: 700;
 	}
 }
 
@@ -415,17 +416,13 @@ section {
 .projects-section,
 .contact-section {
 	padding: 5vw;
-	max-width: 1600px;
 	margin: 0 auto;
 
 	@include respond-to("md") {
-		@include flexCenter();
-		align-items: flex-start;
 	}
 
 	@include respond-to("lg") {
 		padding: 65px 156px;
-		max-height: 500px;
 	}
 }
 .projects-section__content,
@@ -434,7 +431,6 @@ section {
 .contact-section__form {
 	padding: 2vw;
 	@include respond-to("md") {
-		width: 50%;
 	}
 	h1 {
 		font-weight: 600;
