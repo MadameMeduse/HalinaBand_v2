@@ -152,7 +152,7 @@ header {
 
 	.panel1 {
 		width: 100%;
-		background: $orange;
+		background: $darkPink;
 		transition-delay: 0.3s;
 		z-index: 100;
 	}
@@ -288,7 +288,7 @@ header {
 		}
 		.header__content--icons {
 			position: absolute;
-			bottom: -14vw;
+			bottom: -2vw;
 			left: 2vw;
 			display: flex;
 			color: #000000;
@@ -297,6 +297,9 @@ header {
 			@include respond-to('sm') {
 				font-size: 12px;
 				bottom: -8vw;
+			}
+			@include respond-to('md') {
+				bottom: -14px;
 			}
 		}
 		@include respond-to('md') {

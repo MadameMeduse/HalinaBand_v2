@@ -34,12 +34,14 @@
 @mixin mainText {
 	font-family: 'Fira Mono';
 	color: $blue;
-	text-transform: uppercase;
 	font-weight: 700;
 }
 @mixin mainHeding {
-	font-family: 'Catamaran';
-	color: $black;
+	font-family: 'Lato';
+	color: $darkPink;
+	text-transform: uppercase;
+	padding: 0 7vw;
+	font-size: 20px;
 }
 
 :root {
@@ -59,9 +61,11 @@ $lightBlack: #101010;
 $lightGrey: #fafafa;
 $yellow: #fdde59;
 $pink: #e9aabd;
+$transPink: #e9aabd77;
 $sandy: #fbe0cf;
 $blue: #1d42ae;
 $orange: #da5336;
+$darkPink: #bd5179;
 
 * {
 	-webkit-font-smoothing: antialiased;
@@ -110,10 +114,7 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
-
-	&:hover {
-		cursor: pointer;
-	}
+	cursor: pointer;
 }
 
 h2 {
@@ -205,6 +206,7 @@ section {
 	background-size: cover !important;
 	background-repeat: no-repeat;
 	padding-bottom: 0;
+	padding-top: 13vw;
 
 	@include respond-to('lg') {
 		padding-top: 2vw;
@@ -212,28 +214,26 @@ section {
 	}
 }
 
-.description__content {
+.container {
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	flex-flow: column-reverse;
-	margin: auto 0;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
 	min-height: 40vh;
-	padding-bottom: 5vw;
-	padding-top: 12vh;
+	padding: 3vh;
 
 	@include respond-to('md') {
 		align-items: flex-end;
+		justify-content: flex-end;
 	}
-	// @include respond-to('lg') {
-	// 	flex-flow: column-reverse;
-	// }
+	h1 {
+		@include mainHeding();
+	}
 	p {
-		max-width: 90vw;
-		height: 80%;
+		max-height: 80%;
+		padding: 7vw 0;
 		font-size: 16px;
 		text-align: left;
-		margin-top: 21vw;
 		@include mainText();
 
 		@include respond-to('sm') {
@@ -244,6 +244,19 @@ section {
 		@include respond-to('md') {
 			font-size: 25px;
 			max-width: 70vw;
+		}
+	}
+	figure {
+		padding: 2vw;
+		display: flex;
+		flex-flow: column;
+		margin: auto;
+		figcaption {
+			background: rgba(255, 255, 255, 0.425);
+			@include mainText();
+			font-size: 12px;
+			padding: 2vw;
+			text-align: center;
 		}
 	}
 
@@ -291,15 +304,6 @@ section {
 	justify-content: space-around;
 	align-items: center;
 
-	figure {
-		padding: 2vw;
-
-		figcaption {
-			background: rgba(255, 255, 255, 0.425);
-			@include mainText();
-		}
-	}
-
 	button {
 		margin: auto 0;
 		display: flex;
@@ -320,7 +324,7 @@ section {
 	}
 }
 
-#blog {
+#offer {
 	background: url(../img/blog_section.png);
 	background-size: cover !important;
 	background-origin: border-box;
@@ -329,138 +333,7 @@ section {
 		min-height: 576px;
 	}
 }
-.blog {
-	color: $lightBlack;
-	padding-bottom: 10vh;
-	margin: 0 auto;
-	max-width: 1600px;
-	@include respond-to("sm") {
-		.responsive-slick {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-	}
 
-	@include respond-to("lg") {
-		height: 438px;
-		padding-bottom: 124px;
-		padding-left: 165px;
-		padding-right: 165px;
-		@include flexCenter();
-		flex-wrap: wrap;
-	}
-
-	.blog__item {
-		text-align: center;
-		padding: 3vw;
-		position: relative;
-		flex-direction: column;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		@include respond-to("sm") {
-			width: 50vw;
-		}
-		@include respond-to("md") {
-			height: 390px;
-			width: 255px;
-			padding: 30px;
-			justify-content: space-between;
-		}
-
-		.blog__item--image {
-			max-width: 150px;
-
-			@include respond-to("md") {
-				width: unset;
-			}
-			img {
-				margin: 0 auto;
-			}
-		}
-
-		.blog__item--content {
-			margin-top: 19px;
-			max-width: 191px;
-			margin-bottom: auto;
-			@include flexBetween;
-			flex-direction: column;
-			height: 100%;
-
-			@include respond-to("md") {
-				padding: 2wmin;
-			}
-
-			h3 {
-				font-family: "Lato";
-				border: none;
-				font-size: 17px;
-			}
-
-			a {
-				margin-top: auto;
-				color: #101010;
-				font-weight: bold;
-				font-size: 12px;
-			}
-		}
-	}
-}
-
-//projects Section & Contact Section
-#projects {
-	background: $white;
-	color: $black;
-}
-.projects-section,
-.contact-section {
-	padding: 5vw;
-	margin: 0 auto;
-
-	@include respond-to("md") {
-	}
-
-	@include respond-to("lg") {
-		padding: 65px 156px;
-	}
-}
-.projects-section__content,
-.projects-section__slider,
-.contact-section__content,
-.contact-section__form {
-	padding: 2vw;
-	@include respond-to("md") {
-	}
-	h1 {
-		font-weight: 600;
-		font-size: 36px;
-		line-height: 43px;
-		@include respond-to("lg") {
-			margin-top: 24px;
-			width: 445px;
-		}
-	}
-
-	p {
-		font-size: 14px;
-		line-height: 20px;
-		text-align: justify;
-		margin: 24px 0;
-		@include respond-to("md") {
-			width: 445px;
-		}
-	}
-}
-
-.socials {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	@include respond-to("md") {
-		margin: 0;
-	}
-}
 #contact {
 	background: url(../img/contact-background.png);
 	background-position: top right;
@@ -468,7 +341,6 @@ section {
 
 .contact-section {
 	color: $lightBlack;
-	z-index: 1000000;
 	@include respond-to("lg") {
 		padding-bottom: 78px;
 	}
@@ -485,7 +357,6 @@ section {
 		margin: 0;
 
 		li {
-			height: 40px;
 			transition: color 0.3s ease;
 
 			& :hover {
@@ -493,16 +364,20 @@ section {
 			}
 		}
 	}
+
+	.contact-section__form,
+	.socials {
+		padding: 3vw;
+	}
 }
 
 //Footer
 
 .footer-section {
-	background: var(--linearBackground);
+	background: $sandy;
 	@include flexCenter();
 
 	img {
-		width: 6vw;
 		margin: 0 9px;
 		border-radius: 6px;
 		padding: 1vw;
@@ -517,6 +392,7 @@ section {
 		margin: 0;
 		font-size: 12px;
 		text-align: center;
+		@include mainText();
 		@include respond-to("xs") {
 			padding: 1vw 2vw;
 		}

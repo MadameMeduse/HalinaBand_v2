@@ -48,8 +48,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-a:hover {
   cursor: pointer;
 }
 
@@ -148,6 +146,7 @@ section {
   background-size: cover !important;
   background-repeat: no-repeat;
   padding-bottom: 0;
+  padding-top: 13vw;
 }
 @media (min-width: 1200px) {
   #description {
@@ -156,71 +155,90 @@ section {
   }
 }
 
-.description__content {
+.container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-flow: column-reverse;
-  margin: auto 0;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   min-height: 40vh;
-  padding-bottom: 5vw;
-  padding-top: 12vh;
+  padding: 3vh;
 }
 @media (min-width: 992px) {
-  .description__content {
+  .container {
     align-items: flex-end;
+    justify-content: flex-end;
   }
 }
-.description__content p {
-  max-width: 90vw;
-  height: 80%;
+.container h1 {
+  font-family: "Lato";
+  color: #bd5179;
+  text-transform: uppercase;
+  padding: 0 7vw;
+  font-size: 20px;
+}
+.container p {
+  max-height: 80%;
+  padding: 7vw 0;
   font-size: 16px;
   text-align: left;
-  margin-top: 21vw;
   font-family: "Fira Mono";
   color: #1d42ae;
-  text-transform: uppercase;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .description__content p {
+  .container p {
     font-size: 20px;
     padding: 3vw;
     margin-top: 15vw;
   }
 }
 @media (min-width: 992px) {
-  .description__content p {
+  .container p {
     font-size: 25px;
     max-width: 70vw;
   }
 }
-.description__content .description__button {
+.container figure {
+  padding: 2vw;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+.container figure figcaption {
+  background: rgba(255, 255, 255, 0.425);
+  font-family: "Fira Mono";
+  color: #1d42ae;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2vw;
+  text-align: center;
+}
+.container .description__button {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 5vw auto;
 }
 @media (min-width: 1200px) {
-  .description__content .description__button {
+  .container .description__button {
     margin: 2vw auto;
   }
 }
-.description__content .description__images {
+.container .description__images {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.description__content .description__images img {
+.container .description__images img {
   max-width: 50vw;
 }
 @media (min-width: 992px) {
-  .description__content .description__images img {
+  .container .description__images img {
     max-width: 40vw;
     padding: 3vw;
   }
 }
-.description__content .description__images .description__images--drummer {
+.container .description__images .description__images--drummer {
   max-width: 20vw;
 }
 
@@ -234,8 +252,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Catamaran";
-  color: #000000;
+  font-family: "Lato";
+  color: #bd5179;
+  text-transform: uppercase;
+  padding: 0 7vw;
+  font-size: 20px;
   font-size: 20px;
 }
 
@@ -247,190 +268,25 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.features__video figure {
-  padding: 2vw;
-}
-.features__video figure figcaption {
-  background: rgba(255, 255, 255, 0.425);
-  font-family: "Fira Mono";
-  color: #1d42ae;
-  text-transform: uppercase;
-  font-weight: 700;
-}
 .features__video button {
   margin: auto 0;
   display: flex;
   font-family: "Fira Mono";
   color: #1d42ae;
-  text-transform: uppercase;
   font-weight: 700;
 }
 .features__video iframe {
   border: solid #1d42ae;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
 }
-#blog {
+#offer {
   background: url(../img/blog_section.png);
   background-size: cover !important;
   background-origin: border-box;
 }
 @media (min-width: 1200px) {
-  #blog {
+  #offer {
     min-height: 576px;
-  }
-}
-
-.blog {
-  color: #101010;
-  padding-bottom: 10vh;
-  margin: 0 auto;
-  max-width: 1600px;
-}
-@media (min-width: 768px) {
-  .blog .responsive-slick {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (min-width: 1200px) {
-  .blog {
-    height: 438px;
-    padding-bottom: 124px;
-    padding-left: 165px;
-    padding-right: 165px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-.blog .blog__item {
-  text-align: center;
-  padding: 3vw;
-  position: relative;
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .blog .blog__item {
-    width: 50vw;
-  }
-}
-@media (min-width: 992px) {
-  .blog .blog__item {
-    height: 390px;
-    width: 255px;
-    padding: 30px;
-    justify-content: space-between;
-  }
-}
-.blog .blog__item .blog__item--image {
-  max-width: 150px;
-}
-@media (min-width: 992px) {
-  .blog .blog__item .blog__item--image {
-    width: unset;
-  }
-}
-.blog .blog__item .blog__item--image img {
-  margin: 0 auto;
-}
-.blog .blog__item .blog__item--content {
-  margin-top: 19px;
-  max-width: 191px;
-  margin-bottom: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100%;
-}
-@media (min-width: 992px) {
-  .blog .blog__item .blog__item--content {
-    padding: 2wmin;
-  }
-}
-.blog .blog__item .blog__item--content h3 {
-  font-family: "Lato";
-  border: none;
-  font-size: 17px;
-}
-.blog .blog__item .blog__item--content a {
-  margin-top: auto;
-  color: #101010;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-#projects {
-  background: #ffffff;
-  color: #000000;
-}
-
-.projects-section,
-.contact-section {
-  padding: 5vw;
-  margin: 0 auto;
-}
-@media (min-width: 1200px) {
-  .projects-section,
-.contact-section {
-    padding: 65px 156px;
-  }
-}
-
-.projects-section__content,
-.projects-section__slider,
-.contact-section__content,
-.contact-section__form {
-  padding: 2vw;
-}
-.projects-section__content h1,
-.projects-section__slider h1,
-.contact-section__content h1,
-.contact-section__form h1 {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 43px;
-}
-@media (min-width: 1200px) {
-  .projects-section__content h1,
-.projects-section__slider h1,
-.contact-section__content h1,
-.contact-section__form h1 {
-    margin-top: 24px;
-    width: 445px;
-  }
-}
-.projects-section__content p,
-.projects-section__slider p,
-.contact-section__content p,
-.contact-section__form p {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: justify;
-  margin: 24px 0;
-}
-@media (min-width: 992px) {
-  .projects-section__content p,
-.projects-section__slider p,
-.contact-section__content p,
-.contact-section__form p {
-    width: 445px;
-  }
-}
-
-.socials {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-@media (min-width: 992px) {
-  .socials {
-    margin: 0;
   }
 }
 
@@ -441,7 +297,6 @@ section {
 
 .contact-section {
   color: #101010;
-  z-index: 1000000;
 }
 @media (min-width: 1200px) {
   .contact-section {
@@ -461,21 +316,23 @@ section {
   margin: 0;
 }
 .contact-section .socials li {
-  height: 40px;
   transition: color 0.3s ease;
 }
 .contact-section .socials li :hover {
   color: #e9aabd;
 }
+.contact-section .contact-section__form,
+.contact-section .socials {
+  padding: 3vw;
+}
 
 .footer-section {
-  background: var(--linearBackground);
+  background: #fbe0cf;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .footer-section img {
-  width: 6vw;
   margin: 0 9px;
   border-radius: 6px;
   padding: 1vw;
@@ -492,6 +349,9 @@ section {
   margin: 0;
   font-size: 12px;
   text-align: center;
+  font-family: "Fira Mono";
+  color: #1d42ae;
+  font-weight: 700;
 }
 @media (min-width: 576px) {
   .footer-section p,
