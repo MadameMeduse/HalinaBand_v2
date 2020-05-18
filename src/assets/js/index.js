@@ -67,3 +67,12 @@ console.log('it works');
 // }
 
 AOS.init();
+
+//change background function
+
+const offerElement = document.querySelector('.offer div');
+const transparentBg = () => {
+	offerElement.style.background = 'transparent';
+};
+
+offerElement.addEventListener('click', transparentBg);

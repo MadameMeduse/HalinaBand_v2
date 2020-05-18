@@ -44,6 +44,14 @@
 	font-size: 20px;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
 :root {
 	--linearBackground: linear-gradient(90deg, #ec62c2 0%, #fddf59 100%);
 	--elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
@@ -117,22 +125,6 @@ a {
 	cursor: pointer;
 }
 
-h2 {
-	padding-top: 5vw;
-	color: black;
-	text-align: center;
-	@include respond-to("md") {
-		padding-top: 3vw;
-		font-size: 36px;
-	}
-}
-h3 {
-	font-size: 24px;
-	text-align: center;
-	border-bottom: 1px ridge $lightBlack;
-	display: inline;
-	font-family: signature;
-}
 p {
 	margin-top: 20px;
 	margin-bottom: 5px;
@@ -142,7 +134,7 @@ p {
 button {
 	width: 115px;
 	height: 40px;
-	background: transparent;
+	background: $sandy;
 	border: 1.5px solid $blue;
 	border-radius: 6px;
 	text-transform: uppercase;
@@ -163,28 +155,23 @@ button {
 		font-size: 14px;
 	}
 	&:hover {
-		background: $sandy;
-		border: none;
+		background: $white;
+		border: 1.5px solid $blue;
 		color: $blue;
 		font-weight: 700;
+		box-shadow: var(--circuleShadow);
 	}
 }
 
 .active {
-	border-bottom: ridge 1px white;
-	color: $white !important;
+	color: $darkPink !important;
 }
 
-//slide In backgound animation
-
-.slide-in {
-	opacity: 0;
-	transition: all .5s;
-	transform: translateY(30%);
-}
-.slide-active {
-	opacity: 1;
-	transform: translateY(0%);
+:active,
+:focus,
+:focus-visible,
+:visited {
+	outline: none;
 }
 
 //Main
@@ -219,7 +206,6 @@ section {
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 40vh;
 	padding: 3vh;
 
 	@include respond-to('md') {
@@ -233,17 +219,16 @@ section {
 		max-height: 80%;
 		padding: 7vw 0;
 		font-size: 16px;
-		text-align: left;
 		@include mainText();
 
 		@include respond-to('sm') {
 			font-size: 20px;
 			padding: 3vw;
-			margin-top: 15vw;
 		}
 		@include respond-to('md') {
 			font-size: 25px;
 			max-width: 70vw;
+			margin-top: 7vw;
 		}
 	}
 	figure {
@@ -251,6 +236,26 @@ section {
 		display: flex;
 		flex-flow: column;
 		margin: auto;
+		border: solid 2px transparent;
+		transition: border 0.1s 0.1s;
+		cursor: pointer;
+
+		@include respond-to('sm') {
+			width: 80vw;
+			height: 50vw;
+		}
+		@include respond-to('md') {
+			max-width: 715px;
+			height: 40vw;
+		}
+
+		&:hover {
+			border: solid 2px $blue;
+		}
+
+		iframe {
+			height: 100%;
+		}
 		figcaption {
 			background: rgba(255, 255, 255, 0.425);
 			@include mainText();
@@ -260,7 +265,7 @@ section {
 		}
 	}
 
-	.description__button {
+	button {
 		@include flexCenter();
 		margin: 5vw auto;
 
@@ -289,42 +294,21 @@ section {
 	background-size: cover !important;
 }
 
-.features__title {
-	padding: 2vw;
-	@include flexCenter();
-	@include mainHeding();
-	font-size: 20px;
-}
-
-.features__video {
-	height: max-content;
-	padding: 5vw;
+button {
+	margin: auto 0;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-
-	button {
-		margin: auto 0;
-		display: flex;
-		@include mainText();
-	}
-
-	iframe {
-		border: solid $blue;
-		box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-	}
-
-	@include respond-to("sm") {
-		// margin: 2vw 3vw;
-	}
-
-	@include respond-to("lg") {
-		// width: 20vw;
-	}
+	@include mainText();
 }
 
-#offer {
+@include respond-to("sm") {
+	// margin: 2vw 3vw;
+}
+
+@include respond-to("lg") {
+	// width: 20vw;
+}
+
+#offer-section {
 	background: url(../img/blog_section.png);
 	background-size: cover !important;
 	background-origin: border-box;
@@ -333,10 +317,96 @@ section {
 		min-height: 576px;
 	}
 }
+.offers {
+	@include flexBetween();
+	flex-wrap: wrap;
+	margin: 5vw 0;
+
+	@include respond-to('md') {
+		margin: 0 auto;
+	}
+	div {
+		border: double 13px $blue;
+		background: transparent;
+		transition: all 0.3s 0.1s;
+		cursor: pointer;
+		color: $blue;
+
+		&:hover {
+			background: $blue;
+			color: $white;
+			transform: scale(1.05);
+		}
+		p {
+			color: inherit;
+		}
+	}
+
+	div:first-child {
+		border: double 13px $orange;
+		background: transparent;
+		color: $orange;
+		&:hover {
+			background: $orange;
+			color: $white !important;
+			transform: scale(1.05);
+		}
+	}
+	div:last-child {
+		border: double 13px $darkPink;
+		background: transparent;
+		color: $darkPink;
+		margin: 0 auto;
+		&:hover {
+			background: $darkPink;
+			color: $white !important;
+			transform: scale(1.05);
+		}
+	}
+	@include respond-to('sm') {
+		flex-flow: row;
+	}
+}
+.offer {
+	@include flexCenter();
+	flex-direction: column;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin: 2vw;
+
+	@include respond-to('sm') {
+		width: 200px;
+		height: 200px;
+	}
+
+	i {
+		font-size: 60px;
+		color: $lightBlack;
+		display: none;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+#gallery {
+	.gallery__content {
+		@include flexCenter();
+		flex-flow: column;
+		background: $sandy;
+		border: dashed 5px $blue;
+		margin-top: 5vw;
+		margin: 5vw;
+	}
+}
 
 #contact {
-	background: url(../img/contact-background.png);
-	background-position: top right;
+	background: url(../img/footer_bg.png);
+	background-position: bottom center;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .contact-section {
