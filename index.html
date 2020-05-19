@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="src/assets/css/mediaQueries.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
     <link rel="stylesheet" href="src/assets/css/flexPanels.css" >
+    <link rel="stylesheet" href="src/assets/css/slider.css" >
 
   </head>
 
@@ -145,7 +146,8 @@
         <div data-aos="fade-up">
           <div class="container">
             <h1>Kim jesteśmy?</h1>
-                <p>Halina Band to pięć utalentowanych i charyzmatycznych kobiet, 
+                <p>
+                  Halina Band to pięć utalentowanych i charyzmatycznych kobiet, 
                     które wspólnie na scenie tworzą niepowtarzalną przestrzeń i klimat.
                   </p>
                   <div data-aos="fade-up">
@@ -171,7 +173,7 @@
         </div>
       </section>
       <section id="features">
-        <div class="container">
+        <div class="container mr-auto">
                     <div data-aos="fade-up">
                         <h1>Poznajmy się</h1>
                           <div data-aos="fade-up">
@@ -245,7 +247,7 @@
   </section>
 </div>
 <section id="offer-section">
-    <div class="container">
+    <div class="container mr-auto">
         <div data-aos="fade-up">
             <h1 class="text-center">Co mozemy zaoferować?</h1>
             <p class="text-right">Napisz do nas a my dostosujemy swoją ofertę do Twoich potrzeb!</p>
@@ -269,19 +271,38 @@
   </section>
   <section id="gallery">
     <div class="gallery__content">
-      <div class="container">
-        <h1>Galeria</h1>
-        <p>
-            Przejdź do galerii i zobacz nas podczas prób i koncertów.
-            </p>
-            <a href="./gallery.html">
-              <img src="src/assets/img/gallery.png" alt="click to go to gallery">
-            </a>
-          </div>
+      <div class="gallery__content--image">
+          <a href="./gallery.html">
+            <img src="src/assets/img/gallery.png" alt="click to go to gallery">
+          </a>
+      </div>
+      <div class="gallery__content--slider">
+          <div class="slider">
+              <div class="slides">
+                <div class="slide current">
+                  <img src="src/assets/img/scianka-poziom2.jpg" alt="">
+                </div>
+                <div class="slide">
+                  <img src="src/assets/img/kobiety_event1.jpg" alt="">
+                </div>
+                <div class="slide">
+                  <img src="src/assets/img/proba_img.jpeg" alt="">
+                </div>
+
+              </div>
+              <div class="controls">
+                <button class="goToPrev">
+                  <i class="fas fa-chevron-circle-left"></i></button>
+                <button class="goToNext">
+                  <i class="fas fa-chevron-circle-right"></i>
+                </button>
+              </div>
+            </div>
+      </div>
         </div>
   </section>
 <section id="contact">
-  <div class="container">
+  <div class="container mr-auto">
     <div class="contact-section">
       <h1>Kontakt</h1>
         <div data-aos="fade-up">
@@ -393,6 +414,7 @@
     <script src="src/assets/js/navigation.js"></script>
     <script src="src/assets/js/form.js"></script>
     <script src="src/assets/js/flexPanels.js"></script>
+    <script src="src/assets/js/slider.js"></script>
 
   </body>
 </html>

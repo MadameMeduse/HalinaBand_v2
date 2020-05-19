@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap&subset=latin-ext");
 @import url('https://fonts.googleapis.com/css?family=Catamaran:700|Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
+
 @font-face {
 	font-family: "signature";
 	src: url("../fonts/Signature.ttf");
@@ -32,7 +34,7 @@
 }
 
 @mixin mainText {
-	font-family: 'Fira Mono';
+	font-family: 'Darker Grotesque', sans-serif;
 	color: $blue;
 	font-weight: 700;
 }
@@ -201,17 +203,24 @@ section {
 	}
 }
 
+.mr-auto {
+	margin-right: auto !important;
+}
+
 .container {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
 	padding: 3vh;
+	margin-left: auto;
 
 	@include respond-to('md') {
-		align-items: flex-end;
-		justify-content: flex-end;
+		align-items: center;
+		justify-content: center;
+		width: 70vw;
 	}
+
 	h1 {
 		@include mainHeding();
 	}
@@ -228,7 +237,7 @@ section {
 		@include respond-to('md') {
 			font-size: 25px;
 			max-width: 70vw;
-			margin-top: 7vw;
+			margin-top: 2vw;
 		}
 	}
 	figure {
@@ -267,7 +276,7 @@ section {
 
 	button {
 		@include flexCenter();
-		margin: 5vw auto;
+		margin: 2vw auto;
 
 		@include respond-to('lg') {
 			margin: 2vw auto;
@@ -395,10 +404,34 @@ button {
 	.gallery__content {
 		@include flexCenter();
 		flex-flow: column;
+		margin: 2vw;
 		background: $sandy;
-		border: dashed 5px $blue;
-		margin-top: 5vw;
-		margin: 5vw;
+
+		@include respond-to('md') {
+			flex-flow: row;
+		}
+
+		.gallery__content--slider {
+			padding: 3vw;
+			width: 100%;
+
+			@include respond-to('md') {
+				width: 50%;
+			}
+			button {
+				border: none;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				@include flexCenter();
+				background: transparent;
+
+				:active,
+				:hover {
+					background: transparent;
+				}
+			}
+		}
 	}
 }
 

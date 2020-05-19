@@ -1,4 +1,4 @@
-//MEDIA-QUERIES
+@import 'main.scss';
 $breakpoints: (
 		"xs": (min-width: 576px),
 		"sm": (min-width: 768px),
@@ -16,6 +16,15 @@ $breakpoints: (
 	}
 }
 
+.slider {
+	padding: 2vw;
+	background: white;
+	border-radius: 20px;
+	border: 2px solid $blue;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
 .slides {
 	height: 200px;
 	position: relative;
@@ -23,7 +32,10 @@ $breakpoints: (
 	overflow: hidden;
 
 	@include respond-to("sm") {
-		height: 500px;
+		height: 300px;
+	}
+	@include respond-to("lg") {
+		height: 400px;
 	}
 }
 
@@ -61,8 +73,7 @@ $breakpoints: (
 
 .controls {
 	display: flex;
-	justify-content: space-around;
-	padding: 2rem;
+	justify-content: space-evenly;
 	i {
 		font-size: 12px;
 		margin-left: 2vw;

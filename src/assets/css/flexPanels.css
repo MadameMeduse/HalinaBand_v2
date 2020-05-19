@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Catamaran:700|Fira+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap");
 @font-face {
   font-family: "signature";
   src: url("../fonts/Signature.ttf");
@@ -139,17 +140,23 @@ section {
   }
 }
 
+.mr-auto {
+  margin-right: auto !important;
+}
+
 .container {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   padding: 3vh;
+  margin-left: auto;
 }
 @media (min-width: 992px) {
   .container {
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
   }
 }
 .container h1 {
@@ -163,7 +170,7 @@ section {
   max-height: 80%;
   padding: 7vw 0;
   font-size: 16px;
-  font-family: "Fira Mono";
+  font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
   font-weight: 700;
 }
@@ -177,7 +184,7 @@ section {
   .container p {
     font-size: 25px;
     max-width: 70vw;
-    margin-top: 7vw;
+    margin-top: 2vw;
   }
 }
 .container figure {
@@ -209,7 +216,7 @@ section {
 }
 .container figure figcaption {
   background: rgba(255, 255, 255, 0.425);
-  font-family: "Fira Mono";
+  font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
   font-weight: 700;
   font-size: 12px;
@@ -220,7 +227,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5vw auto;
+  margin: 2vw auto;
 }
 @media (min-width: 1200px) {
   .container button {
@@ -253,7 +260,7 @@ section {
 button {
   margin: auto 0;
   display: flex;
-  font-family: "Fira Mono";
+  font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
   font-weight: 700;
 }
@@ -353,10 +360,36 @@ button {
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  margin: 2vw;
   background: #fbe0cf;
-  border: dashed 5px #1d42ae;
-  margin-top: 5vw;
-  margin: 5vw;
+}
+@media (min-width: 992px) {
+  #gallery .gallery__content {
+    flex-flow: row;
+  }
+}
+#gallery .gallery__content .gallery__content--slider {
+  padding: 3vw;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #gallery .gallery__content .gallery__content--slider {
+    width: 50%;
+  }
+}
+#gallery .gallery__content .gallery__content--slider button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+#gallery .gallery__content .gallery__content--slider button :active,
+#gallery .gallery__content .gallery__content--slider button :hover {
+  background: transparent;
 }
 
 #contact {
@@ -420,7 +453,7 @@ button {
   margin: 0;
   font-size: 12px;
   text-align: center;
-  font-family: "Fira Mono";
+  font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
   font-weight: 700;
 }
@@ -528,7 +561,7 @@ button {
 .panel p {
   text-transform: uppercase;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-family: "Fira Mono";
+  font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
   font-weight: 700;
   color: #ffffff;
