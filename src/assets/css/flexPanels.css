@@ -139,6 +139,11 @@ section {
     min-height: 576px;
   }
 }
+#description img {
+  margin: 5vw auto;
+  border-radius: 20px;
+  border: solid 2px #1d42ae;
+}
 
 @media (min-width: 992px) {
   .mr-auto {
@@ -178,7 +183,7 @@ section {
 }
 @media (min-width: 1441px) {
   .container {
-    margin-left: 60vw;
+    margin-left: 52vw;
   }
 }
 .container h1 {
@@ -279,7 +284,7 @@ section {
   max-width: 20vw;
 }
 
-#features {
+#about {
   background: url(../img/team.png);
   background-size: cover !important;
 }
@@ -309,7 +314,7 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 5vw 0;
-  max-width: 800px;
+  max-width: 900px;
 }
 @media (min-width: 992px) {
   .offers {

@@ -3,47 +3,47 @@ $('.top-menu a').click(function() {
 });
 
 // Slick -------------->
-$('.responsive-slick').slick({
-	dots: true,
-	infinite: true,
-	speed: 300,
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	autoplay: false,
-	autoplaySpeed: 1900,
-	responsive: [
-		{
-			breakpoint: 1024,
-			settings: 'unslick'
-		},
+// $('.responsive-slick').slick({
+// 	dots: true,
+// 	infinite: true,
+// 	speed: 300,
+// 	slidesToShow: 4,
+// 	slidesToScroll: 1,
+// 	autoplay: false,
+// 	autoplaySpeed: 1900,
+// 	responsive: [
+// 		{
+// 			breakpoint: 1024,
+// 			settings: 'unslick'
+// 		},
 
-		{
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 480,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		}
-	]
-});
+// 		{
+// 			breakpoint: 600,
+// 			settings: {
+// 				slidesToShow: 1,
+// 				slidesToScroll: 1
+// 			}
+// 		},
+// 		{
+// 			breakpoint: 480,
+// 			settings: {
+// 				slidesToShow: 1,
+// 				slidesToScroll: 1
+// 			}
+// 		}
+// 	]
+// });
 
 //Red-section slider
 
-$('.center').slick({
-	centerMode: true,
-	centerPadding: '-30px',
-	slidesToShow: 1,
-	autoplay: true,
-	autoplaySpeed: 1900,
-	arrows: false
-});
+// $('.center').slick({
+// 	centerMode: true,
+// 	centerPadding: '-30px',
+// 	slidesToShow: 1,
+// 	autoplay: true,
+// 	autoplaySpeed: 1900,
+// 	arrows: false
+// });
 
 // slide background in scroll
 
