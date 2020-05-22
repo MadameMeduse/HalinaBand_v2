@@ -142,7 +142,7 @@ section {
 #description img {
   margin: 5vw auto;
   border-radius: 20px;
-  border: solid 2px #1d42ae;
+  border: dashed 5px #1d42ae;
 }
 
 @media (min-width: 992px) {

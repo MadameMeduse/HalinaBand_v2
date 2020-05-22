@@ -142,7 +142,7 @@ section {
 #description img {
   margin: 5vw auto;
   border-radius: 20px;
-  border: solid 2px #1d42ae;
+  border: dashed 5px #1d42ae;
 }
 
 @media (min-width: 992px) {
@@ -506,11 +506,15 @@ button {
 
 .slider {
   padding: 2vw;
-  background: white;
-  border-radius: 20px;
-  border: 2px solid #1d42ae;
-  max-width: 400px;
-  margin: 0 auto;
+  background: transparent;
+  max-width: 800px;
+  margin: 5vw auto;
+  width: 90vw;
+}
+@media (min-width: 768px) {
+  .slider {
+    width: 70vw;
+  }
 }
 
 .slides {
@@ -521,7 +525,7 @@ button {
 }
 @media (min-width: 768px) {
   .slides {
-    height: 300px;
+    height: 400px;
   }
 }
 @media (min-width: 1200px) {
@@ -569,13 +573,21 @@ button {
   justify-content: space-evenly;
 }
 .controls i {
-  font-size: 12px;
-  margin-left: 2vw;
+  font-size: 14px;
 }
 @media (min-width: 992px) {
   .controls i {
-    font-size: 17px;
+    font-size: 19px;
   }
+}
+.controls button {
+  background: rgba(255, 255, 255, 0.507);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=slider.css.map */
