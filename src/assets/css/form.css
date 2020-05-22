@@ -140,15 +140,25 @@ section {
   }
 }
 
-.mr-auto {
-  margin-right: auto !important;
+@media (min-width: 992px) {
+  .mr-auto {
+    margin-left: 10vw !important;
+  }
+}
+
+.center-container {
+  margin-left: 0 !important;
+  margin: auto !important;
+}
+.center-container p {
+  text-align: center !important;
 }
 
 .container {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-flow: column;
   padding: 3vh;
   margin-left: auto;
   max-width: 700px;
@@ -158,6 +168,17 @@ section {
     align-items: center;
     justify-content: center;
     width: 70vw;
+    margin-left: 30vw;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    margin-left: 40vw;
+  }
+}
+@media (min-width: 1441px) {
+  .container {
+    margin-left: 60vw;
   }
 }
 .container h1 {
@@ -169,7 +190,6 @@ section {
 }
 .container p {
   max-height: 80%;
-  padding: 7vw 0;
   font-size: 16px;
   font-family: "Darker Grotesque", sans-serif;
   color: #1d42ae;
@@ -178,20 +198,18 @@ section {
 @media (min-width: 768px) {
   .container p {
     font-size: 20px;
-    padding: 3vw;
   }
 }
 @media (min-width: 992px) {
   .container p {
     font-size: 25px;
-    max-width: 70vw;
     margin-top: 2vw;
   }
 }
 .container figure {
   display: flex;
   flex-flow: column;
-  margin: auto;
+  margin: 5vw auto;
   border: solid 2px transparent;
   transition: border 0.1s 0.1s;
   cursor: pointer;
@@ -226,6 +244,11 @@ section {
   padding: 2vw;
   text-align: center;
   border-radius: 0 0 20px 20px;
+}
+@media (min-width: 1200px) {
+  .container figure figcaption {
+    font-size: 18px;
+  }
 }
 .container button {
   display: flex;
@@ -286,10 +309,12 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 5vw 0;
+  max-width: 800px;
 }
 @media (min-width: 992px) {
   .offers {
     margin: 0 auto;
+    width: 70vw;
   }
 }
 .offers div {
@@ -328,6 +353,11 @@ button {
   background: #bd5179;
   color: #ffffff !important;
   transform: scale(1.05);
+}
+@media (min-width: 768px) {
+  .offers div:last-child {
+    margin: 2vw;
+  }
 }
 @media (min-width: 768px) {
   .offers {

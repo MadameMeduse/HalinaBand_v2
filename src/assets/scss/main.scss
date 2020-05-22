@@ -204,14 +204,23 @@ section {
 }
 
 .mr-auto {
-	margin-right: auto !important;
+	@include respond-to('md') {
+		margin-left: 10vw !important;
+	}
+}
+
+.center-container {
+	margin-left: 0 !important;
+	margin: auto !important;
+
+	p {
+		text-align: center !important;
+	}
 }
 
 .container {
-	display: flex;
+	@include flexCenter();
 	flex-flow: column;
-	justify-content: center;
-	align-items: center;
 	padding: 3vh;
 	margin-left: auto;
 	max-width: 700px;
@@ -220,6 +229,14 @@ section {
 		align-items: center;
 		justify-content: center;
 		width: 70vw;
+		margin-left: 30vw;
+	}
+
+	@include respond-to('lg') {
+		margin-left: 40vw;
+	}
+	@include respond-to('xlg') {
+		margin-left: 60vw;
 	}
 
 	h1 {
@@ -227,24 +244,21 @@ section {
 	}
 	p {
 		max-height: 80%;
-		padding: 7vw 0;
 		font-size: 16px;
 		@include mainText();
 
 		@include respond-to('sm') {
 			font-size: 20px;
-			padding: 3vw;
 		}
 		@include respond-to('md') {
 			font-size: 25px;
-			max-width: 70vw;
 			margin-top: 2vw;
 		}
 	}
 	figure {
 		display: flex;
 		flex-flow: column;
-		margin: auto;
+		margin: 5vw auto;
 		border: solid 2px transparent;
 		transition: border 0.1s 0.1s;
 		cursor: pointer;
@@ -275,6 +289,10 @@ section {
 			padding: 2vw;
 			text-align: center;
 			border-radius: 0 0 20px 20px;
+
+			@include respond-to('lg') {
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -334,9 +352,11 @@ button {
 	@include flexBetween();
 	flex-wrap: wrap;
 	margin: 5vw 0;
+	max-width: 800px;
 
 	@include respond-to('md') {
 		margin: 0 auto;
+		width: 70vw;
 	}
 	div {
 		border: double 13px $blue;
@@ -375,6 +395,10 @@ button {
 			background: $darkPink;
 			color: $white !important;
 			transform: scale(1.05);
+		}
+
+		@include respond-to('sm') {
+			margin: 2vw;
 		}
 	}
 	@include respond-to('sm') {

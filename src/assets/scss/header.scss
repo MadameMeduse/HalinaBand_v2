@@ -56,7 +56,6 @@ header {
 		margin: 0;
 		display: flex;
 		justify-content: flex-start;
-		padding: 2vw;
 	}
 }
 .fixed-nav {
@@ -174,7 +173,7 @@ header {
 		background: $sandy;
 
 		a {
-			font-size: 14px;
+			font-size: 20px;
 			transition: color 0.3s ease;
 			font-weight: 700;
 			color: $black;
@@ -211,8 +210,13 @@ header {
 
 	/* mobile MENU
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-	.top-menu li + li {
+	.top-menu li {
 		margin-top: 1.5rem;
+		padding: 3vw;
+
+		@include respond-to('md') {
+			padding: 1vw;
+		}
 	}
 
 	.top-menu > li:last-child {
@@ -237,34 +241,52 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 		img {
 			max-width: 200px;
 		}
 		i {
 			color: var(--blue);
-			font-size: 2em;
+			font-size: 1.5em;
+			font-weight: 600 !important;
+		}
+	}
+	.close-mobile-menu {
+		position: absolute;
+		right: 0;
+		max-width: 50px;
+		top: 2vw;
+	}
+}
+.socials {
+	display: flex;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	margin-left: -6vw;
+
+	@include respond-to('xs') {
+		margin-left: 0;
+	}
+
+	li {
+		padding: 2vw !important;
+		@include respond-to('md') {
+			padding: 1vw;
 		}
 	}
 
-	.socials {
-		display: flex;
-		margin-top: 3rem;
-		margin-bottom: 1rem;
-
-		li + li {
-			margin-top: 0;
-			&:hover {
-				cursor: pointer;
-			}
+	li + li {
+		margin-top: 0;
+		&:hover {
+			cursor: pointer;
 		}
+	}
 
-		.fa-stack {
-			font-size: 1.7rem;
-			color: var(--blue);
-			.fab {
-				font-size: 1.2rem;
-			}
+	.fa-stack {
+		font-size: 2rem;
+		color: var(--blue);
+		.fab {
+			font-size: 2.2rem;
 		}
 	}
 }
