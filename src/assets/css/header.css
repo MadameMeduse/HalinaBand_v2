@@ -309,6 +309,7 @@ button {
 }
 .offers div p {
   color: inherit;
+  padding: 0;
 }
 .offers div:first-child {
   border: double 13px #da5336;
