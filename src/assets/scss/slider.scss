@@ -17,7 +17,6 @@ $breakpoints: (
 }
 
 .slider {
-	padding: 2vw;
 	background: transparent;
 	max-width: 800px;
 	margin: 5vw auto;
@@ -25,6 +24,9 @@ $breakpoints: (
 
 	@include respond-to('sm') {
 		width: 70vw;
+	}
+	@include respond-to('md') {
+		margin: 1vw auto;
 	}
 }
 

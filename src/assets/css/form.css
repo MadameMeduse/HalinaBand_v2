@@ -311,20 +311,22 @@ button {
 .offers {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 5vw 0;
   max-width: 900px;
+  padding: 0 4vw;
 }
 @media (min-width: 992px) {
   .offers {
     margin: 0 auto;
     width: 70vw;
+    padding: 3vw;
   }
 }
 .offers div {
   border: double 13px #1d42ae;
-  background: transparent;
+  background: #1d41ae7a;
   transition: all 0.3s 0.1s;
   cursor: pointer;
   color: #1d42ae;
@@ -337,10 +339,11 @@ button {
 .offers div p {
   color: inherit;
   padding: 0;
+  font-weight: 700;
 }
 .offers div:first-child {
   border: double 13px #da5336;
-  background: transparent;
+  background: #da543677;
   color: #da5336;
 }
 .offers div:first-child:hover {
@@ -350,7 +353,7 @@ button {
 }
 .offers div:last-child {
   border: double 13px #bd5179;
-  background: transparent;
+  background: #bd51797a;
   color: #bd5179;
   margin: 0 auto;
 }
@@ -382,8 +385,8 @@ button {
 }
 @media (min-width: 768px) {
   .offer {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 }
 .offer i {
@@ -461,13 +464,27 @@ button {
 }
 .contact-section .socials li {
   transition: color 0.3s ease;
+  width: 25%;
 }
-.contact-section .socials li :hover {
+.contact-section .socials li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.contact-section .socials li a :hover {
   color: #e9aabd;
 }
 .contact-section .contact-section__form,
 .contact-section .socials {
   padding: 3vw;
+  max-width: 540px;
+}
+@media (min-width: 992px) {
+  .contact-section .contact-section__form,
+.contact-section .socials {
+    padding: 0;
+  }
 }
 
 .footer-section {
@@ -475,21 +492,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  padding: 1vw;
 }
 .footer-section img {
-  margin: 0 9px;
   border-radius: 6px;
   padding: 1vw;
+  width: 100px;
 }
 @media (min-width: 992px) {
   .footer-section img {
-    width: 3vw;
+    width: 15vw;
     padding: 1vw 0;
   }
 }
 .footer-section p,
 .footer-section span {
-  padding: 2vw;
   margin: 0;
   font-size: 12px;
   text-align: center;
@@ -497,13 +515,15 @@ button {
   color: #1d42ae;
   font-weight: 700;
 }
-@media (min-width: 576px) {
-  .footer-section p,
-.footer-section span {
-    padding: 1vw 2vw;
-  }
+.footer-section #contact > div > div > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+form {
+  margin: 0 auto;
+}
 @media (min-width: 1200px) {
   form {
     width: 540px;
@@ -513,7 +533,7 @@ button {
 form .form__name {
   display: block;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   form .form__name {
     display: flex;
     align-items: center;
@@ -539,7 +559,7 @@ form select {
   color: rgba(19, 39, 67, 0.5);
   margin-bottom: 10px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   form input,
 form select {
     margin-bottom: 23px;

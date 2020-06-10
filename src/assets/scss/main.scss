@@ -355,18 +355,20 @@ button {
 	}
 }
 .offers {
-	@include flexBetween();
+	@include flexCenter();
 	flex-wrap: wrap;
 	margin: 5vw 0;
 	max-width: 900px;
+	padding: 0 4vw;
 
 	@include respond-to('md') {
 		margin: 0 auto;
 		width: 70vw;
+		padding: 3vw;
 	}
 	div {
 		border: double 13px $blue;
-		background: transparent;
+		background: #1d41ae7a;
 		transition: all 0.3s 0.1s;
 		cursor: pointer;
 		color: $blue;
@@ -379,12 +381,13 @@ button {
 		p {
 			color: inherit;
 			padding: 0;
+			font-weight: 700;
 		}
 	}
 
 	div:first-child {
 		border: double 13px $orange;
-		background: transparent;
+		background: #da543677;
 		color: $orange;
 		&:hover {
 			background: $orange;
@@ -394,7 +397,7 @@ button {
 	}
 	div:last-child {
 		border: double 13px $darkPink;
-		background: transparent;
+		background: #bd51797a;
 		color: $darkPink;
 		margin: 0 auto;
 		&:hover {
@@ -420,8 +423,8 @@ button {
 	margin: 2vw;
 
 	@include respond-to('sm') {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 	}
 
 	i {
@@ -496,9 +499,15 @@ button {
 
 		li {
 			transition: color 0.3s ease;
+			width: 25%;
 
-			& :hover {
-				color: $pink;
+			a {
+				@include flexCenter();
+				flex-flow: column;
+
+				& :hover {
+					color: $pink;
+				}
 			}
 		}
 	}
@@ -506,6 +515,11 @@ button {
 	.contact-section__form,
 	.socials {
 		padding: 3vw;
+		max-width: 540px;
+
+		@include respond-to('md') {
+			padding: 0;
+		}
 	}
 }
 
@@ -514,25 +528,27 @@ button {
 .footer-section {
 	background: $sandy;
 	@include flexCenter();
+	flex-flow: column;
+	padding: 1vw;
 
 	img {
-		margin: 0 9px;
 		border-radius: 6px;
 		padding: 1vw;
+		width: 100px;
 		@include respond-to("md") {
-			width: 3vw;
+			width: 15vw;
 			padding: 1vw 0;
 		}
 	}
 	p,
 	span {
-		padding: 2vw;
 		margin: 0;
 		font-size: 12px;
 		text-align: center;
 		@include mainText();
-		@include respond-to("xs") {
-			padding: 1vw 2vw;
-		}
+	}
+
+	#contact > div > div > ul > li {
+		@include flexCenter();
 	}
 }

@@ -1,13 +1,14 @@
 @import "main.scss";
 
 form {
+	margin: 0 auto;
 	@include respond-to("lg") {
 		width: 540px;
 		height: 305px;
 	}
 	.form__name {
 		display: block;
-		@include respond-to("md") {
+		@include respond-to("sm") {
 			@include flexBetween;
 		}
 		input {
@@ -30,7 +31,7 @@ form {
 		line-height: 19px;
 		color: rgba(19, 39, 67, 0.5);
 		margin-bottom: 10px;
-		@include respond-to("md") {
+		@include respond-to("sm") {
 			margin-bottom: 23px;
 			padding: 20px 30px;
 			height: 60px;
