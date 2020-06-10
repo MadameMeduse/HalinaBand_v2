@@ -710,6 +710,9 @@ header button:hover {
   color: #ffffff;
   font-weight: bolder;
 }
+.page-header .top-menu-wrapper.show-offcanvas {
+  overflow: hidden;
+}
 .page-header .top-menu-wrapper.show-offcanvas::before {
   background: var(--overlay);
   z-index: 1;
@@ -718,6 +721,7 @@ header button:hover {
 .page-header .top-menu-wrapper.show-offcanvas .top-menu {
   transform: translate3d(0, 0, 0);
   transition-duration: 0.7s;
+  overflow-y: hidden;
 }
 .page-header .top-menu-wrapper.show-offcanvas .panel1 {
   transition-delay: 0s;
@@ -756,24 +760,22 @@ header button:hover {
   padding: 1.5rem 2rem 0;
 }
 .page-header .top-menu .mob-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 4rem;
+  margin: -10px;
+  padding: 0;
 }
-.page-header .top-menu .mob-block img {
-  max-width: 200px;
+.page-header .top-menu img {
+  max-width: 150px;
 }
-.page-header .top-menu .mob-block i {
+.page-header .top-menu i {
   color: var(--blue);
   font-size: 1.5em;
   font-weight: 600 !important;
 }
 .page-header .close-mobile-menu {
   position: absolute;
-  right: 0;
-  max-width: 50px;
-  top: 2vw;
+  right: 10px;
+  max-width: 25px;
+  top: 5px;
 }
 
 .socials {
