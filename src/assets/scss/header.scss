@@ -98,6 +98,8 @@ header {
 		width: 100%;
 		text-transform: uppercase;
 		z-index: 100000;
+		max-width: 1200px;
+		margin: 0 auto;
 
 		.logo {
 			max-width: 130px;

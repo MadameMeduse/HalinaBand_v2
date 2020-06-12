@@ -185,8 +185,17 @@ section {
 	min-height: 40vh;
 	padding-bottom: 5vh;
 
+	@include respond-to('md') {
+		padding: 0 3vw;
+	}
+
 	@include respond-to("lg") {
 		min-height: 70vh;
+		padding: 0 10vw;
+	}
+	@include respond-to("xlg") {
+		min-height: 70vh;
+		padding: 0 22vw;
 	}
 }
 
@@ -198,7 +207,7 @@ section {
 	padding-top: 13vw;
 
 	@include respond-to('lg') {
-		padding-top: 2vw;
+		padding-top: 9vw;
 		min-height: 576px;
 	}
 
@@ -206,6 +215,7 @@ section {
 		margin: 5vw auto;
 		border-radius: 20px;
 		border: dashed 5px $blue;
+		max-width: 400px;
 	}
 }
 
@@ -235,14 +245,6 @@ section {
 		align-items: center;
 		justify-content: center;
 		width: 70vw;
-		margin-left: 30vw;
-	}
-
-	@include respond-to('lg') {
-		margin-left: 40vw;
-	}
-	@include respond-to('xlg') {
-		margin-left: 52vw;
 	}
 
 	h1 {
@@ -346,8 +348,9 @@ button {
 }
 
 #offer-section {
-	background: url(../img/blog_section.png);
+	background: url(../img/overview_section.png);
 	background-size: cover !important;
+	background-repeat: no-repeat;
 	background-origin: border-box;
 
 	@include respond-to("lg") {
@@ -439,9 +442,7 @@ button {
 }
 
 #gallery {
-	background: url(../img/overview_section.png);
-	background-size: cover !important;
-	background-repeat: no-repeat;
+	padding-top: 5vw;
 	.gallery__content {
 		@include flexCenter();
 		flex-flow: column;

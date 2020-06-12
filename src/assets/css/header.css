@@ -123,9 +123,21 @@ section {
   min-height: 40vh;
   padding-bottom: 5vh;
 }
+@media (min-width: 992px) {
+  section {
+    padding: 0 3vw;
+  }
+}
 @media (min-width: 1200px) {
   section {
     min-height: 70vh;
+    padding: 0 10vw;
+  }
+}
+@media (min-width: 1441px) {
+  section {
+    min-height: 70vh;
+    padding: 0 22vw;
   }
 }
 
@@ -138,7 +150,7 @@ section {
 }
 @media (min-width: 1200px) {
   #description {
-    padding-top: 2vw;
+    padding-top: 9vw;
     min-height: 576px;
   }
 }
@@ -146,6 +158,7 @@ section {
   margin: 5vw auto;
   border-radius: 20px;
   border: dashed 5px #1d42ae;
+  max-width: 400px;
 }
 
 @media (min-width: 992px) {
@@ -176,17 +189,6 @@ section {
     align-items: center;
     justify-content: center;
     width: 70vw;
-    margin-left: 30vw;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    margin-left: 40vw;
-  }
-}
-@media (min-width: 1441px) {
-  .container {
-    margin-left: 52vw;
   }
 }
 .container h1 {
@@ -301,8 +303,9 @@ button {
 }
 
 #offer-section {
-  background: url(../img/blog_section.png);
+  background: url(../img/overview_section.png);
   background-size: cover !important;
+  background-repeat: no-repeat;
   background-origin: border-box;
 }
 @media (min-width: 1200px) {
@@ -402,9 +405,7 @@ button {
 }
 
 #gallery {
-  background: url(../img/overview_section.png);
-  background-size: cover !important;
-  background-repeat: no-repeat;
+  padding-top: 5vw;
 }
 #gallery .gallery__content {
   display: flex;
@@ -602,6 +603,8 @@ header button:hover {
   width: 100%;
   text-transform: uppercase;
   z-index: 100000;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .page-header nav .logo {
   max-width: 130px;
