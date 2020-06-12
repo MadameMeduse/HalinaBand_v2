@@ -439,44 +439,27 @@ button {
 }
 
 #gallery {
+	background: url(../img/overview_section.png);
+	background-size: cover !important;
+	background-repeat: no-repeat;
 	.gallery__content {
 		@include flexCenter();
 		flex-flow: column;
-		margin: 2vw;
-		background: $sandy;
 
 		@include respond-to('md') {
 			flex-flow: row;
 		}
-
-		.gallery__content--slider {
-			padding: 3vw;
-			width: 100%;
-
-			@include respond-to('md') {
-				width: 50%;
-			}
-			button {
-				border: none;
-				width: 30px;
-				height: 30px;
-				border-radius: 50%;
-				@include flexCenter();
-				background: transparent;
-
-				:active,
-				:hover {
-					background: transparent;
-				}
-			}
-		}
+	}
+	.gallery__content--image {
+		border-radius: 50%;
+		background: $sandy;
 	}
 }
 
 #contact {
 	background: url(../img/footer_bg.png);
 	background-position: bottom center;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -535,10 +518,6 @@ button {
 		border-radius: 6px;
 		padding: 1vw;
 		width: 100px;
-		@include respond-to("md") {
-			width: 15vw;
-			padding: 1vw 0;
-		}
 	}
 	p,
 	span {

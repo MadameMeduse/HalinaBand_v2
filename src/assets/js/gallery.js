@@ -82,5 +82,6 @@ Gallery.prototype.showImage = function(el) {
 
 const gallery1 = new Gallery(document.querySelector('.gallery1'));
 const gallery2 = new Gallery(document.querySelector('.gallery2'));
+const gallery3 = new Gallery(document.querySelector('.gallery3'));
 
 console.log(gallery1, gallery2);

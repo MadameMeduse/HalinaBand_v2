@@ -23,7 +23,18 @@ $breakpoints: (
 .galleries {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-gap: 2vw;
+}
+
+#gallery1__section,
+#gallery3__section {
+	background: url(../img/overview_section.png);
+	background-size: cover !important;
+	background-repeat: no-repeat;
+}
+
+#gallery2__section {
+	background: url(../img/team.png);
+	background-size: cover !important;
 }
 .gallery {
 	display: flex;
@@ -31,7 +42,6 @@ $breakpoints: (
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: stretch;
-	background: white;
 	max-width: 800px;
 	flex-grow: 1;
 	margin-left: auto;
@@ -42,6 +52,7 @@ $breakpoints: (
 	margin: 2vw;
 	object-fit: cover;
 	box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
+	min-height: 192px;
 
 	@include respond-to("sm") {
 		width: 17vw;

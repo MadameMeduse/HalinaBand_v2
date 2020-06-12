@@ -398,47 +398,31 @@ button {
   margin: 0;
 }
 
+#gallery {
+  background: url(../img/overview_section.png);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
 #gallery .gallery__content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  margin: 2vw;
-  background: #fbe0cf;
 }
 @media (min-width: 992px) {
   #gallery .gallery__content {
     flex-flow: row;
   }
 }
-#gallery .gallery__content .gallery__content--slider {
-  padding: 3vw;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  #gallery .gallery__content .gallery__content--slider {
-    width: 50%;
-  }
-}
-#gallery .gallery__content .gallery__content--slider button {
-  border: none;
-  width: 30px;
-  height: 30px;
+#gallery .gallery__content--image {
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-#gallery .gallery__content .gallery__content--slider button :active,
-#gallery .gallery__content .gallery__content--slider button :hover {
-  background: transparent;
+  background: #fbe0cf;
 }
 
 #contact {
   background: url(../img/footer_bg.png);
   background-position: bottom center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -500,12 +484,6 @@ button {
   padding: 1vw;
   width: 100px;
 }
-@media (min-width: 992px) {
-  .footer-section img {
-    width: 15vw;
-    padding: 1vw 0;
-  }
-}
 .footer-section p,
 .footer-section span {
   margin: 0;
@@ -528,7 +506,18 @@ button {
 .galleries {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2vw;
+}
+
+#gallery1__section,
+#gallery3__section {
+  background: url(../img/overview_section.png);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+#gallery2__section {
+  background: url(../img/team.png);
+  background-size: cover !important;
 }
 
 .gallery {
@@ -537,7 +526,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  background: white;
   max-width: 800px;
   flex-grow: 1;
   margin-left: auto;
@@ -548,6 +536,7 @@ button {
   margin: 2vw;
   object-fit: cover;
   box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
+  min-height: 192px;
 }
 @media (min-width: 768px) {
   .gallery img {
