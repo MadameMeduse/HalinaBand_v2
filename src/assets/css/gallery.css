@@ -532,7 +532,7 @@ button {
 }
 
 .gallery img {
-  width: 40vw;
+  width: 45%;
   margin: 2vw;
   object-fit: cover;
   box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
@@ -540,12 +540,7 @@ button {
 }
 @media (min-width: 768px) {
   .gallery img {
-    width: 17vw;
-  }
-}
-@media (min-width: 1200px) {
-  .gallery img {
-    width: 10vw;
+    width: 25%;
     margin: 1vw;
   }
 }
